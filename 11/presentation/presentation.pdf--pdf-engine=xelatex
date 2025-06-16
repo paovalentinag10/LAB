@@ -1,0 +1,172 @@
+<h1 id="информация">Информация</h1>
+<h2 id="докладчик">Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:60%;">
+<ul>
+<li>Герра Гарсия Паола Валентина</li>
+<li>студентка</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1032225472@pfur.ru">1032225472@pfur.ru</a></li>
+<li><a href="https://github.com/paovalentinag10/labs/tree/main"
+class="uri">https://github.com/paovalentinag10/labs/tree/main</a></li>
+</ul>
+</div><div class="column" style="width:25%;">
+
+</div>
+</div>
+<h2 id="вводная-часть">Вводная часть</h2>
+<p><strong>Цель работы</strong></p>
+<p>Реализовать модель <span
+class="math inline"><em>M</em>|<em>M</em>|1</span> в CPN tools.</p>
+<p><strong>Задание</strong></p>
+<ul>
+<li>Реализовать в CPN Tools модель системы массового обслуживания
+M|M|1.</li>
+<li>Настроить мониторинг параметров моделируемой системы и нарисовать
+графики очереди.</li>
+</ul>
+<h2 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h2>
+<p><strong>Постановка задачи</strong></p>
+<p>В систему поступает поток заявок двух типов, распределённый по
+пуассоновскому закону. Заявки поступают в очередь сервера на обработку.
+Дисциплина очереди - FIFO. Если сервер находится в режиме ожидания (нет
+заявок на сервере), то заявка поступает на обработку сервером.</p>
+<h2 id="выполнение-лабораторной-работы-1">Выполнение лабораторной
+работы</h2>
+<figure id="fig:001">
+<img src="image/1.png" style="width:70.0%"
+alt="Граф сети системы обработки заявок в очереди" />
+<figcaption aria-hidden="true">Граф сети системы обработки заявок в
+очереди</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-2">Выполнение лабораторной
+работы</h2>
+<figure id="fig:002">
+<img src="image/2.png" style="width:70.0%"
+alt="Граф генератора заявок системы" />
+<figcaption aria-hidden="true">Граф генератора заявок
+системы</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-3">Выполнение лабораторной
+работы</h2>
+<figure id="fig:003">
+<img src="image/3.png" style="width:70.0%"
+alt="Граф процесса обработки заявок на сервере системы" />
+<figcaption aria-hidden="true">Граф процесса обработки заявок на сервере
+системы</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-4">Выполнение лабораторной
+работы</h2>
+<figure id="fig:004">
+<img src="image/4.png" style="width:50.0%"
+alt="Задание деклараций системы" />
+<figcaption aria-hidden="true">Задание деклараций системы</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-5">Выполнение лабораторной
+работы</h2>
+<figure id="fig:005">
+<img src="image/5.png" style="width:70.0%"
+alt="Параметры элементов основного графа системы обработки заявок в очереди" />
+<figcaption aria-hidden="true">Параметры элементов основного графа
+системы обработки заявок в очереди</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-6">Выполнение лабораторной
+работы</h2>
+<figure id="fig:006">
+<img src="image/6.png" style="width:70.0%"
+alt="Параметры элементов генератора заявок системы" />
+<figcaption aria-hidden="true">Параметры элементов генератора заявок
+системы</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-7">Выполнение лабораторной
+работы</h2>
+<figure id="fig:007">
+<img src="image/7.png" style="width:70.0%"
+alt="Параметры элементов обработчика заявок системы" />
+<figcaption aria-hidden="true">Параметры элементов обработчика заявок
+системы</figcaption>
+</figure>
+<h2 id="мониторинг-параметров-моделируемой-системы">Мониторинг
+параметров моделируемой системы</h2>
+<figure id="fig:008">
+<img src="image/8.png" style="width:70.0%"
+alt="Функция Predicate монитора Ostanovka" />
+<figcaption aria-hidden="true">Функция Predicate монитора
+Ostanovka</figcaption>
+</figure>
+<h2 id="мониторинг-параметров-моделируемой-системы-1">Мониторинг
+параметров моделируемой системы</h2>
+<figure id="fig:009">
+<img src="image/9.png" style="width:70.0%"
+alt="Функция Observer монитора Queue Delay" />
+<figcaption aria-hidden="true">Функция Observer монитора Queue
+Delay</figcaption>
+</figure>
+<h2 id="мониторинг-параметров-моделируемой-системы-2">Мониторинг
+параметров моделируемой системы</h2>
+<figure id="fig:010">
+<img src="image/10.png" style="width:70.0%"
+alt="Файл Queue_Delay.log" />
+<figcaption aria-hidden="true">Файл Queue_Delay.log</figcaption>
+</figure>
+<h2 id="мониторинг-параметров-моделируемой-системы-3">Мониторинг
+параметров моделируемой системы</h2>
+<figure id="fig:011">
+<img src="image/11.png" style="width:60.0%"
+alt="График изменения задержки в очереди" />
+<figcaption aria-hidden="true">График изменения задержки в
+очереди</figcaption>
+</figure>
+<h2 id="мониторинг-параметров-моделируемой-системы-4">Мониторинг
+параметров моделируемой системы</h2>
+<figure id="fig:012">
+<img src="image/12.png" style="width:70.0%"
+alt="Функция Observer монитора Queue Delay Real" />
+<figcaption aria-hidden="true">Функция Observer монитора Queue Delay
+Real</figcaption>
+</figure>
+<h2 id="мониторинг-параметров-моделируемой-системы-5">Мониторинг
+параметров моделируемой системы</h2>
+<figure id="fig:013">
+<img src="image/13.png" style="width:50.0%"
+alt="Содержимое Queue_Delay_Real.log" />
+<figcaption aria-hidden="true">Содержимое
+Queue_Delay_Real.log</figcaption>
+</figure>
+<h2 id="мониторинг-параметров-моделируемой-системы-6">Мониторинг
+параметров моделируемой системы</h2>
+<figure id="fig:014">
+<img src="image/14.png" style="width:70.0%"
+alt="Функция Observer монитора Long Delay Time" />
+<figcaption aria-hidden="true">Функция Observer монитора Long Delay
+Time</figcaption>
+</figure>
+<h2 id="мониторинг-параметров-моделируемой-системы-7">Мониторинг
+параметров моделируемой системы</h2>
+<figure id="fig:015">
+<img src="image/15.png" style="width:70.0%"
+alt="Определение longdelaytime в декларациях" />
+<figcaption aria-hidden="true">Определение longdelaytime в
+декларациях</figcaption>
+</figure>
+<h2 id="мониторинг-параметров-моделируемой-системы-8">Мониторинг
+параметров моделируемой системы</h2>
+<figure id="fig:016">
+<img src="image/16.png" style="width:45.0%"
+alt="Содержимое Long_Delay_Time.log" />
+<figcaption aria-hidden="true">Содержимое
+Long_Delay_Time.log</figcaption>
+</figure>
+<h2 id="мониторинг-параметров-моделируемой-системы-9">Мониторинг
+параметров моделируемой системы</h2>
+<figure id="fig:017">
+<img src="image/17.png" style="width:60.0%"
+alt="Периоды времени, когда значения задержки в очереди превышали заданное значение" />
+<figcaption aria-hidden="true">Периоды времени, когда значения задержки
+в очереди превышали заданное значение</figcaption>
+</figure>
+<h2 id="выводы">Выводы</h2>
+<p>В процессе выполнения данной лабораторной работы я реализовала модель
+системы массового обслуживания <span
+class="math inline"><em>M</em>|<em>M</em>|1</span> в CPN Tools.</p>

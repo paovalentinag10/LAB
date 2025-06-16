@@ -1,0 +1,100 @@
+<h1 id="информация">Информация</h1>
+<h2 id="докладчик">Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:60%;">
+<ul>
+<li>Герра Гарсия Паола Валентина</li>
+<li>студентка</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1032225472@pfur.ru">1032225472@pfur.ru</a></li>
+<li><a href="https://github.com/paovalentinag10/labs/tree/main"
+class="uri">https://github.com/paovalentinag10/labs/tree/main</a></li>
+</ul>
+</div><div class="column" style="width:25%;">
+
+</div>
+</div>
+<h1 id="введение">Введение</h1>
+<p><strong>Цель работы</strong></p>
+<p>Реализовать модель задачи об обедающих мудрецах в CPN Tools.</p>
+<p><strong>Задание</strong></p>
+<ul>
+<li>Реализовать модель задачи об обедающих мудрецах в CPN Tools;</li>
+<li>Вычислить пространство состояний, сформировать отчет о нем и
+построить граф.</li>
+</ul>
+<h2 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h2>
+<p><strong>Постановка задачи</strong></p>
+<p>Пять мудрецов сидят за круглым столом и могут пребывать в двух
+состояниях – думать и есть. Между соседями лежит одна палочка для еды.
+Для приёма пищи необходимы две палочки. Палочки – пересекающийся ресурс.
+Необходимо синхронизировать процесс еды так, чтобы мудрецы не умерли с
+голода.</p>
+<h2 id="выполнение-лабораторной-работы-1">Выполнение лабораторной
+работы</h2>
+<figure id="fig:001">
+<img src="image/1.png" style="width:50.0%"
+alt="Граф сети задачи об обедающих мудрецах" />
+<figcaption aria-hidden="true">Граф сети задачи об обедающих
+мудрецах</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-2">Выполнение лабораторной
+работы</h2>
+<figure id="fig:002">
+<img src="image/2.png" style="width:60.0%"
+alt="Задание деклараций задачи об обедающих мудрецах" />
+<figcaption aria-hidden="true">Задание деклараций задачи об обедающих
+мудрецах</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-3">Выполнение лабораторной
+работы</h2>
+<figure id="fig:003">
+<img src="image/3.png" style="width:50.0%"
+alt="Модель задачи об обедающих мудрецах" />
+<figcaption aria-hidden="true">Модель задачи об обедающих
+мудрецах</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-4">Выполнение лабораторной
+работы</h2>
+<figure id="fig:004">
+<img src="image/4.png" style="width:50.0%"
+alt="Запуск модели задачи об обедающих мудрецах" />
+<figcaption aria-hidden="true">Запуск модели задачи об обедающих
+мудрецах</figcaption>
+</figure>
+<h2 id="упражнение">Упражнение</h2>
+<pre><code> Statistics
+------------------------------------------------------------------------
+
+  State Space
+     Nodes:  11
+     Arcs:   30
+     Secs:   0
+     Status: Full
+
+  Scc Graph
+     Nodes:  1
+     Arcs:   0
+     Secs:   0</code></pre>
+<h2 id="упражнение-1">Упражнение</h2>
+<pre><code> Boundedness Properties
+------------------------------------------------------------------------
+
+  Best Integer Bounds
+                             Upper      Lower
+     philosopher&#39;philosopher_eats 1
+                             2          0
+     philosopher&#39;philosopher_thinks 1
+                             5          3
+     philosopher&#39;sticks_on_the_table 1
+                             5          1</code></pre>
+<h2 id="упражнение-2">Упражнение</h2>
+<figure id="fig:005">
+<img src="image/5.png" style="width:60.0%"
+alt="Граф пространства состояний" />
+<figcaption aria-hidden="true">Граф пространства состояний</figcaption>
+</figure>
+<h2 id="выводы">Выводы</h2>
+<p>В процессе выполнения данной лабораторной работы я реализовала модель
+задачи об обедающих мудрецах в CPN Tools.</p>

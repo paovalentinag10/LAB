@@ -1,0 +1,99 @@
+<h1 id="информация">Информация</h1>
+<h2 id="докладчик">Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:60%;">
+<ul>
+<li>Герра Гарсия Паола Валентина</li>
+<li>студентка</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1032225472@pfur.ru">1032225472@pfur.ru</a></li>
+<li><a href="https://github.com/paovalentinag10/labs/tree/main"
+class="uri">https://github.com/paovalentinag10/labs/tree/main</a></li>
+</ul>
+</div><div class="column" style="width:25%;">
+
+</div>
+</div>
+<h2 id="введение">Введение</h2>
+<p><strong>Цель работы</strong></p>
+<p>Реализовать модель “Накорми студентов” в CPN Tools.</p>
+<p><strong>Задание</strong></p>
+<ul>
+<li>Реализовать модель “Накорми студентов” в CPN Tools;</li>
+<li>Вычислить пространство состояний, сформировать отчет о нем и
+построить граф.</li>
+</ul>
+<h2 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h2>
+<p>Рассмотрим пример студентов, обедающих пирогами. Голодный студент
+становится сытым после того, как съедает пирог.</p>
+<p>Таким образом, имеем:</p>
+<ul>
+<li>два типа фишек: «пироги» и «студенты»;</li>
+<li>три позиции: «голодный студент», «пирожки», «сытый студент»;</li>
+<li>один переход: «съесть пирожок».</li>
+</ul>
+<h2 id="выполнение-лабораторной-работы-1">Выполнение лабораторной
+работы</h2>
+<figure id="fig:001">
+<img src="image/1.png" style="width:70.0%"
+alt="Граф сети модели «Накорми студентов»" />
+<figcaption aria-hidden="true">Граф сети модели «Накорми
+студентов»</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-2">Выполнение лабораторной
+работы</h2>
+<figure id="fig:002">
+<img src="image/2.png" style="width:70.0%"
+alt="Декларации модели «Накорми студентов»" />
+<figcaption aria-hidden="true">Декларации модели «Накорми
+студентов»</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-3">Выполнение лабораторной
+работы</h2>
+<figure id="fig:003">
+<img src="image/3.png" style="width:50.0%"
+alt="Модель «Накорми студентов»" />
+<figcaption aria-hidden="true">Модель «Накорми студентов»</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-4">Выполнение лабораторной
+работы</h2>
+<figure id="fig:004">
+<img src="image/4.png" style="width:70.0%"
+alt="Запуск модели «Накорми студентов»" />
+<figcaption aria-hidden="true">Запуск модели «Накорми
+студентов»</figcaption>
+</figure>
+<h2 id="упражнение">Упражнение</h2>
+<pre><code> Statistics
+------------------------------------------------------------------------
+  State Space
+     Nodes:  4
+     Arcs:   3
+     Secs:   0
+     Status: Full
+
+  Scc Graph
+     Nodes:  4
+     Arcs:   3
+     Secs:   0</code></pre>
+<h2 id="упражнение-1">Упражнение</h2>
+<pre><code> Boundedness Properties
+------------------------------------------------------------------------
+  Best Integer Bounds
+                             Upper      Lower
+     nakormi_studenta&#39;food 1 5          2
+     nakormi_studenta&#39;hungry_student 1
+                             3          0
+     nakormi_studenta&#39;satisfied_student 1
+                             3          0</code></pre>
+<h2 id="упражнение-2">Упражнение</h2>
+<figure id="fig:005">
+<img src="image/5.png" style="width:50.0%"
+alt="Пространство состояний для модели «Накорми студентов»" />
+<figcaption aria-hidden="true">Пространство состояний для модели
+«Накорми студентов»</figcaption>
+</figure>
+<h2 id="выводы">Выводы</h2>
+<p>В процессе выполнения данной лабораторной работы я реализовала модель
+“Накорми студентов” в CPN Tools.</p>
