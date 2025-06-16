@@ -1,0 +1,78 @@
+<h1 id="информация">Информация</h1>
+<h2 id="докладчик">Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:60%;">
+<ul>
+<li>Герра Гарсия Паола Валентина</li>
+<li>студентка</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1032225472@pfur.ru">1032225472@pfur.ru</a></li>
+<li><a href="https://github.com/paovalentinag10/labs/tree/main"
+class="uri">https://github.com/paovalentinag10/labs/tree/main</a></li>
+</ul>
+</div><div class="column" style="width:25%;">
+
+</div>
+</div>
+<h2 id="цель-работы">Цель работы</h2>
+<p>Рассмотреть пример моделирования в <em>xcos</em> системы массового
+обслуживания типа <span
+class="math inline"><em>M</em>|<em>M</em>|1|∞</span>.</p>
+<h2 id="задание">Задание</h2>
+<ol type="1">
+<li>Реализовать модель системы массового обслуживания типа <span
+class="math inline"><em>M</em>|<em>M</em>|1|∞</span>;</li>
+<li>Построить график поступления и обработки заявок;</li>
+<li>Построить график динамики размера очереди.</li>
+</ol>
+<h2 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h2>
+<figure id="fig:001">
+<img src="image/1.png" style="width:70.0%"
+alt="Задание переменных окружения в xcos для модели" />
+<figcaption aria-hidden="true">Задание переменных окружения в xcos для
+модели</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-1">Выполнение лабораторной
+работы</h2>
+<figure id="fig:002">
+<img src="image/2.png" style="width:50.0%"
+alt="Суперблок, моделирующий поступление заявок" />
+<figcaption aria-hidden="true">Суперблок, моделирующий поступление
+заявок</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-2">Выполнение лабораторной
+работы</h2>
+<figure id="fig:003">
+<img src="image/3.png" style="width:50.0%"
+alt="Суперблок, моделирующий обработку заявок" />
+<figcaption aria-hidden="true">Суперблок, моделирующий обработку
+заявок</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-3">Выполнение лабораторной
+работы</h2>
+<figure id="fig:004">
+<img src="image/4.png" style="width:50.0%"
+alt="Модель M|M|1|\infty в xcos" />
+<figcaption aria-hidden="true">Модель <span
+class="math inline"><em>M</em>|<em>M</em>|1|∞</span> в xcos</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-4">Выполнение лабораторной
+работы</h2>
+<figure id="fig:005">
+<img src="image/5.png" style="width:60.0%"
+alt="Динамика размера очереди" />
+<figcaption aria-hidden="true">Динамика размера очереди</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-5">Выполнение лабораторной
+работы</h2>
+<figure id="fig:006">
+<img src="image/6.png" style="width:50.0%"
+alt="Поступление и обработка заявок" />
+<figcaption aria-hidden="true">Поступление и обработка
+заявок</figcaption>
+</figure>
+<h2 id="выводы">Выводы</h2>
+<p>В процессе выполнения данной лабораторной работы я рассмотрела пример
+моделирования в <em>xcos</em> системы массового обслуживания типа <span
+class="math inline"><em>M</em>|<em>M</em>|1|∞</span>.</p>

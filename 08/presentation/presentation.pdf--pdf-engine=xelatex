@@ -1,0 +1,97 @@
+<h1 id="информация">Информация</h1>
+<h2 id="докладчик">Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:60%;">
+<ul>
+<li>Герра Гарсия Паола Валентина</li>
+<li>студентка</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1032225472@pfur.ru">1032225472@pfur.ru</a></li>
+<li><a href="https://github.com/paovalentinag10/labs/tree/main"
+class="uri">https://github.com/paovalentinag10/labs/tree/main</a></li>
+</ul>
+</div><div class="column" style="width:25%;">
+
+</div>
+</div>
+<h2 id="цель-работы">Цель работы</h2>
+<p>Реализовать модель TCP/AQM в xcos и OpenModelica.</p>
+<h2 id="задание">Задание</h2>
+<ol type="1">
+<li>Построить модель TCP/AQM в xcos;</li>
+<li>Построить графики динамики изменения размера TCP окна <span
+class="math inline"><em>W</em>(<em>t</em>)</span> и размера очереди
+<span class="math inline"><em>Q</em>(<em>t</em>)</span>;</li>
+<li>Построить модель TCP/AQM в OpenModelica;</li>
+</ol>
+<h2 id="реализация-в-xcos">Реализация в xcos</h2>
+<figure id="fig:001">
+<img src="image/1.png" style="width:70.0%" alt="Установка контекста" />
+<figcaption aria-hidden="true">Установка контекста</figcaption>
+</figure>
+<h2 id="реализация-в-xcos-1">Реализация в xcos</h2>
+<figure id="fig:002">
+<img src="image/2.png" style="width:70.0%"
+alt="Модель TCP/AQM в xcos" />
+<figcaption aria-hidden="true">Модель TCP/AQM в xcos</figcaption>
+</figure>
+<h2 id="реализация-в-xcos-2">Реализация в xcos</h2>
+<figure id="fig:003">
+<img src="image/3.png" style="width:70.0%"
+alt="Динамика изменения размера TCP окна W (t) и размера очереди Q(t)" />
+<figcaption aria-hidden="true">Динамика изменения размера TCP окна W (t)
+и размера очереди Q(t)</figcaption>
+</figure>
+<h2 id="реализация-в-xcos-3">Реализация в xcos</h2>
+<figure id="fig:004">
+<img src="image/4.png" style="width:70.0%"
+alt="Фазовый портрет (W, Q)" />
+<figcaption aria-hidden="true">Фазовый портрет (W, Q)</figcaption>
+</figure>
+<h2 id="реализация-в-xcos-4">Реализация в xcos</h2>
+<figure id="fig:005">
+<img src="image/7.png" style="width:70.0%"
+alt="Динамика изменения размера TCP окна W (t) и размера очереди Q(t) при С = 0.9" />
+<figcaption aria-hidden="true">Динамика изменения размера TCP окна W (t)
+и размера очереди Q(t) при С = 0.9</figcaption>
+</figure>
+<h2 id="реализация-в-xcos-5">Реализация в xcos</h2>
+<figure id="fig:006">
+<img src="image/8.png" style="width:70.0%"
+alt="Фазовый портрет (W, Q) при С = 0.9" />
+<figcaption aria-hidden="true">Фазовый портрет (W, Q) при С =
+0.9</figcaption>
+</figure>
+<h2 id="реализация-модели-в-openmodelica">Реализация модели в
+OpenModelica</h2>
+<pre><code>parameter Real N=1;
+parameter Real R=1;
+parameter Real K=5.3;
+parameter Real C=1;
+
+Real W(start=0.1);
+Real Q(start=1);
+
+equation
+
+der(W)= 1/R - W*delay(W, R)/(2*R)*K*delay(Q, R);
+der(Q)= if (Q==0) then max(N*W/R-C,0) else (N*W/R-C);</code></pre>
+<h2 id="реализация-модели-в-openmodelica-1">Реализация модели в
+OpenModelica</h2>
+<figure id="fig:007">
+<img src="image/5.png" style="width:70.0%"
+alt="Динамика изменения размера TCP окна W (t) и размера очереди Q(t). OpenModelica" />
+<figcaption aria-hidden="true">Динамика изменения размера TCP окна W (t)
+и размера очереди Q(t). OpenModelica</figcaption>
+</figure>
+<h2 id="реализация-модели-в-openmodelica-2">Реализация модели в
+OpenModelica</h2>
+<figure id="fig:008">
+<img src="image/6.png" style="width:70.0%"
+alt="Фазовый портрет (W, Q). OpenModelica" />
+<figcaption aria-hidden="true">Фазовый портрет (W, Q).
+OpenModelica</figcaption>
+</figure>
+<h2 id="выводы">Выводы</h2>
+<p>В процессе выполнения данной лабораторной работы я реализовала модель
+TCP/AQM в xcos и OpenModelica.</p>
