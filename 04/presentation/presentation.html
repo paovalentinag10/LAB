@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="- Герра Гарсия Паола Валентина">
+  <title>Лабораторная работа №4</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/metropolis.css" id="theme">
+  
+  
+  
+  
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Лабораторная работа №4</h1>
+  <p class="subtitle">Задание для самостоятельного выполнения</p>
+  <p class="author">- Герра Гарсия Паола Валентина</p>
+  <p class="institute">- Российский университет дружбы народов, Москва,
+Россия</p>
+</section>
+
+<section>
+<section id="информация" class="title-slide slide level1">
+<h1>Информация</h1>
+
+</section>
+<section id="докладчик" class="slide level2">
+<h2>Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:60%;">
+<ul>
+<li>Герра Гарсия Паола Валентина</li>
+<li>студентка</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1032225472@pfur.ru">1032225472@pfur.ru</a></li>
+<li><a href="https://github.com/paovalentinag10/labs/tree/main"
+class="uri">https://github.com/paovalentinag10/labs/tree/main</a></li>
+</ul>
+</div><div class="column" style="width:25%;">
+
+</div>
+</div>
+</section>
+<section id="цель-работы" class="slide level2">
+<h2>Цель работы</h2>
+<p>Выполнить задание для самостоятельного выполнения.</p>
+</section>
+<section id="задание" class="slide level2">
+<h2>Задание</h2>
+<ol type="1">
+<li>Для приведённой схемы разработать имитационную модель в пакете
+NS-2;</li>
+<li>Построить график изменения размера окна TCP (в Xgraph и в
+GNUPlot);</li>
+<li>Построить график изменения длины очереди и средней длины очереди на
+первом маршрутизаторе;</li>
+<li>Оформить отчёт о выполненной работе.</li>
+</ol>
+</section>
+<section id="выполнение-лабораторной-работы" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<p>Описание моделируемой сети:</p>
+<ul>
+<li>сеть состоит из N TCP-источников, N TCP-приёмников, двух
+маршрутизаторов R1 и R2 между источниками и приёмниками (N — не менее
+20);</li>
+<li>между TCP-источниками и первым маршрутизатором установлены
+дуплексные соединения с пропускной способностью 100 Мбит/с и задержкой
+20 мс очередью типа DropTail;</li>
+<li>между TCP-приёмниками и вторым маршрутизатором установлены
+дуплексные соединения с пропускной способностью 100 Мбит/с и задержкой
+20 мс очередью типа DropTail;</li>
+</ul>
+</section>
+<section id="выполнение-лабораторной-работы-1" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<ul>
+<li>между маршрутизаторами установлено симплексное соединение (R1–R2) с
+пропускной способностью 20 Мбит/с и задержкой 15 мс очередью типа RED,
+размером буфера 300 пакетов; в обратную сторону — симплексное соединение
+(R2–R1) с пропускной способностью 15 Мбит/с и задержкой 20 мс очередью
+типа DropTail;</li>
+<li>данные передаются по протоколу FTP поверх TCPReno;</li>
+<li>параметры алгоритма RED: <span
+class="math inline"><em>q</em><sub><em>m</em></sub><em>i</em><em>n</em> = 75, <em>q</em><sub><em>m</em></sub><em>a</em><em>x</em> = 150, <em>q</em><sub><em>w</em></sub> = 0, 002, <em>p</em><sub><em>m</em></sub><em>a</em><em>x</em> = 0.1</span>;</li>
+<li>максимальный размер TCP-окна 32; размер передаваемого пакета 500
+байт; время моделирования — не менее 20 единиц модельного времени.</li>
+</ul>
+</section>
+<section id="выполнение-лабораторной-работы-2" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<pre><code># создание объекта Simulator
+set ns [new Simulator]
+# открытие на запись файла out.nam для визуализатора nam
+set nf [open out.nam w]
+# все результаты моделирования будут записаны в переменную nf
+$ns namtrace-all $nf
+# открытие на запись файла трассировки out.tr
+# для регистрации всех событий
+set f [open out.tr w]
+# все регистрируемые события будут записаны в переменную f
+$ns trace-all $f
+
+Agent/TCP set window_ 32
+Agent/TCP set pktSize_ 500</code></pre>
+</section>
+<section id="выполнение-лабораторной-работы-3" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<pre><code># процедура finish
+proc finish {} {
+    global tchan_
+    # подключение кода AWK:
+    set awkCode {
+    {
+        if ($1 == &quot;Q&quot; &amp;&amp; NF&gt;2) {
+            print $2, $3 &gt;&gt; &quot;temp.q&quot;;
+            set end $2
+    }
+        else if ($1 == &quot;a&quot; &amp;&amp; NF&gt;2)
+            print $2, $3 &gt;&gt; &quot;temp.a&quot;;
+    }
+}</code></pre>
+</section>
+<section id="выполнение-лабораторной-работы-4" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<pre><code>exec rm -f temp.q temp.a
+exec touch temp.a temp.q
+
+exec awk $awkCode all.q
+
+# Запуск xgraph с графиками окна TCP и очереди:
+exec xgraph -fg pink -bg purple -bb -tk -x time -t &quot;TCPRenoCWND&quot; WindowVsTimeRenoOne &amp;
+exec xgraph -fg pink -bg purple -bb -tk -x time -t &quot;TCPRenoCWND&quot; WindowVsTimeRenoAll &amp;
+exec xgraph -bb -tk -x time -y queue temp.q &amp;
+exec xgraph -bb -tk -x time -y queue temp.a &amp;
+exec nam out.nam &amp;
+exit 0
+}</code></pre>
+</section>
+<section id="выполнение-лабораторной-работы-5" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<pre><code># Формирование файла с данными о размере окна TCP:
+proc plotWindow {tcpSource file} {
+    global ns
+    set time 0.01
+    set now [$ns now]
+    set cwnd [$tcpSource set cwnd_]
+    puts $file &quot;$now $cwnd&quot;
+    $ns at [expr $now+$time] &quot;plotWindow $tcpSource $file&quot;
+}</code></pre>
+</section>
+<section id="выполнение-лабораторной-работы-6" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<pre><code>set r1 [$ns node]
+set r2 [$ns node]
+$ns simplex-link $r1 $r2 20Mb 15ms RED
+$ns simplex-link $r2 $r1 15Mb 20ms DropTail
+$ns queue-limit $r1 $r2 300
+
+set N 30
+for {set i 0} {$i &lt; $N} {incr i} {
+    set n1($i) [$ns node]
+    $ns duplex-link $n1($i) $r1 100Mb 20ms DropTail
+    set n2($i) [$ns node]
+    $ns duplex-link $n2($i) $r2 100Mb 20ms DropTail
+    set tcp($i) [$ns create-connection TCP/Reno $n1($i) TCPSink $n2($i) $i]
+    set ftp($i) [$tcp($i) attach-source FTP]
+}</code></pre>
+</section>
+<section id="выполнение-лабораторной-работы-7" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<pre><code># Мониторинг размера окна TCP:
+set windowVsTimeOne [open WindowVsTimeRenoOne w]
+set windowVsTimeAll [open WindowVsTimeRenoAll w]
+
+set qmon [$ns monitor-queue $r1 $r2 [open qm.out w] 0.1];
+[$ns link $r1 $r2] queue-sample-timeout;
+
+# Мониторинг очереди:
+set redq [[$ns link $r1 $r2] queue]
+$redq set thresh_ 75
+$redq set maxthresh_ 150
+$redq set q_weight_ 0.002
+$redq set linterm_ 10
+
+set tchan_ [open all.q w]
+$redq trace curq_
+$redq trace ave_
+$redq attach $tchan_</code></pre>
+</section>
+<section id="выполнение-лабораторной-работы-8" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<pre><code>for {set i 0} {$i &lt; $N} {incr i} {
+    $ns at 0.0 &quot;$ftp($i) start&quot;
+    $ns at 0.0 &quot;plotWindow $tcp($i) $windowVsTimeAll&quot;
+}
+
+$ns at 0.0 &quot;plotWindow $tcp(1) $windowVsTimeOne&quot;
+
+# at-событие для планировщика событий, которое запускает
+# процедуру finish через 20s после начала моделирования
+$ns at 20.0 &quot;finish&quot;
+# запуск модели
+$ns run</code></pre>
+</section>
+<section id="выполнение-лабораторной-работы-9" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<figure id="fig:001">
+<img data-src="image/1.png" style="width:60.0%"
+alt="Схема моделируемой сети при N=30" />
+<figcaption aria-hidden="true">Схема моделируемой сети при
+N=30</figcaption>
+</figure>
+</section>
+<section id="выполнение-лабораторной-работы-10" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<figure id="fig:002">
+<img data-src="image/2.png" style="width:60.0%"
+alt="Изменение размера окна TCP на линке 1-го источника при N=30" />
+<figcaption aria-hidden="true">Изменение размера окна TCP на линке 1-го
+источника при N=30</figcaption>
+</figure>
+</section>
+<section id="выполнение-лабораторной-работы-11" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<figure id="fig:003">
+<img data-src="image/3.png" style="width:50.0%"
+alt="Изменение размера окна TCP на всех источниках при N=30" />
+<figcaption aria-hidden="true">Изменение размера окна TCP на всех
+источниках при N=30</figcaption>
+</figure>
+</section>
+<section id="выполнение-лабораторной-работы-12" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<figure id="fig:004">
+<img data-src="image/4.png" style="width:60.0%"
+alt="Изменение размера длины очереди на линке (R1–R2) при N=30" />
+<figcaption aria-hidden="true">Изменение размера длины очереди на линке
+(R1–R2) при N=30</figcaption>
+</figure>
+</section>
+<section id="выполнение-лабораторной-работы-13" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<figure id="fig:005">
+<img data-src="image/5.png" style="width:60.0%"
+alt="Изменение размера средней длины очереди на линке (R1–R2) при N=30" />
+<figcaption aria-hidden="true">Изменение размера средней длины очереди
+на линке (R1–R2) при N=30</figcaption>
+</figure>
+</section>
+<section id="выполнение-лабораторной-работы-14" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<pre><code>#!/usr/bin/gnuplot -persist
+# задаём текстовую кодировку,
+# тип терминала, тип и размер шрифта
+
+set encoding utf8
+set term pngcairo font &quot;Helvetica,9&quot;</code></pre>
+</section>
+<section id="выполнение-лабораторной-работы-15" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<pre><code># задаём выходной файл графика
+set out &#39;window_1.png&#39;
+
+# задаём название графика
+set title &quot;Изменение размера окна TCP на линке 1-го источника при N=30&quot;
+
+# подписи осей графика
+set xlabel &quot;t[s]&quot; font &quot;Helvetica, 10&quot;
+set ylabel &quot;CWND [pkt]&quot; font &quot;Helvetica, 10&quot;
+
+# построение графика, используя значения
+# 1-го и 2-го столбцов файла WindowVsTimeRenoOne
+plot &quot;WindowVsTimeRenoOne&quot; using ($1):($2) with lines title &quot;Размер окна TCP&quot;</code></pre>
+</section>
+<section id="выполнение-лабораторной-работы-16" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<pre><code># задаём выходной файл графика
+set out &#39;window_2.png&#39;
+
+# задаём название графика
+set title &quot;Изменение размера окна TCP на всех N источниках  при N=30&quot;
+
+# построение графика, используя значения
+# 1-го и 2-го столбцов файла WindowVsTimeRenoAll
+plot &quot;WindowVsTimeRenoAll&quot; using ($1):($2) with lines title &quot;Размер окна TCP&quot;</code></pre>
+</section>
+<section id="выполнение-лабораторной-работы-17" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<pre><code># задаём выходной файл графика
+set out &#39;queue.png&#39;
+
+# задаём название графика
+set title &quot;Изменение размера длины очереди на линке (R1–R2)&quot;
+
+# подписи осей графика
+set xlabel &quot;t[s]&quot; font &quot;Helvetica, 10&quot;
+set ylabel &quot;Queue Length [pkt]&quot; font &quot;Helvetica, 10&quot;
+
+# построение графика, используя значения
+# 1-го и 2-го столбцов файла temp.q
+plot &quot;temp.q&quot; using ($1):($2) with lines title &quot;Текущая длина очереди&quot;</code></pre>
+</section>
+<section id="выполнение-лабораторной-работы-18" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<pre><code># задаём выходной файл графика
+set out &#39;av_queue.png&#39;
+
+# задаём название графика
+set title &quot;Изменение размера средней длины очереди на линке (R1–R2)&quot;
+
+# подписи осей графика
+set xlabel &quot;t[s]&quot; font &quot;Helvetica, 10&quot;
+set ylabel &quot;Queue Avg Length [pkt]&quot; font &quot;Helvetica, 10&quot;
+
+# построение графика, используя значения
+# 1-го и 2-го столбцов файла temp.a
+plot &quot;temp.a&quot; using ($1):($2) with lines title &quot;Средняя длина очереди&quot;</code></pre>
+</section>
+<section id="выполнение-лабораторной-работы-19" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<figure id="fig:006">
+<img data-src="image/6.png" style="width:60.0%"
+alt="Изменение размера окна TCP на линке 1-го источника при N=30" />
+<figcaption aria-hidden="true">Изменение размера окна TCP на линке 1-го
+источника при N=30</figcaption>
+</figure>
+</section>
+<section id="выполнение-лабораторной-работы-20" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<figure id="fig:007">
+<img data-src="image/7.png" style="width:60.0%"
+alt="Изменение размера окна TCP на всех источниках при N=30" />
+<figcaption aria-hidden="true">Изменение размера окна TCP на всех
+источниках при N=30</figcaption>
+</figure>
+</section>
+<section id="выполнение-лабораторной-работы-21" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<figure id="fig:008">
+<img data-src="image/8.png" style="width:60.0%"
+alt="Изменение размера длины очереди на линке (R1–R2) при N=30" />
+<figcaption aria-hidden="true">Изменение размера длины очереди на линке
+(R1–R2) при N=30</figcaption>
+</figure>
+</section>
+<section id="выполнение-лабораторной-работы-22" class="slide level2">
+<h2>Выполнение лабораторной работы</h2>
+<figure id="fig:009">
+<img data-src="image/9.png" style="width:60.0%"
+alt="Изменение размера средней длины очереди на линке (R1–R2) при N=30" />
+<figcaption aria-hidden="true">Изменение размера средней длины очереди
+на линке (R1–R2) при N=30</figcaption>
+</figure>
+</section>
+<section id="выводы" class="slide level2">
+<h2>Выводы</h2>
+<p>В результате выполнения данной лабораторной работы была разработана
+имитационная модель в пакете NS-2, построены графики изменения размера
+окна TCP, изменения длины очереди и средней длины очереди.</p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
