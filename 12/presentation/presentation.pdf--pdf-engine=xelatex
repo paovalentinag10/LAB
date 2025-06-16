@@ -1,0 +1,108 @@
+<h1 id="информация">Информация</h1>
+<h2 id="докладчик">Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:60%;">
+<ul>
+<li>Герра Гарсия Паола Валентина</li>
+<li>студентка</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1032225472@pfur.ru">1032225472@pfur.ru</a></li>
+<li><a href="https://github.com/paovalentinag10/labs/tree/main"
+class="uri">https://github.com/paovalentinag10/labs/tree/main</a></li>
+</ul>
+</div><div class="column" style="width:25%;">
+
+</div>
+</div>
+<h2 id="цели-и-задачи">Цели и задачи</h2>
+<p><strong>Цель работы</strong></p>
+<p>Реализовать простой протокол передачи данных в CPN Tools.</p>
+<p><strong>Задание</strong></p>
+<ul>
+<li>Реализовать простой протокол передачи данных в CPN Tools.</li>
+<li>Вычислить пространство состояний, сформировать отчет о нем и
+построить граф.</li>
+</ul>
+<h2 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h2>
+<figure id="fig:001">
+<img src="image/1.png" style="width:70.0%" alt="Задание деклараций" />
+<figcaption aria-hidden="true">Задание деклараций</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-1">Выполнение лабораторной
+работы</h2>
+<figure id="fig:002">
+<img src="image/2.png" style="width:60.0%" alt="Начальный граф" />
+<figcaption aria-hidden="true">Начальный граф</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-2">Выполнение лабораторной
+работы</h2>
+<figure id="fig:003">
+<img src="image/3.png" style="width:60.0%"
+alt="Добавление промежуточных состояний" />
+<figcaption aria-hidden="true">Добавление промежуточных
+состояний</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-3">Выполнение лабораторной
+работы</h2>
+<figure id="fig:004">
+<img src="image/4.png" style="width:70.0%" alt="Задание деклараций" />
+<figcaption aria-hidden="true">Задание деклараций</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-4">Выполнение лабораторной
+работы</h2>
+<figure id="fig:005">
+<img src="image/5.png" style="width:70.0%"
+alt="Модель простого протокола передачи данных" />
+<figcaption aria-hidden="true">Модель простого протокола передачи
+данных</figcaption>
+</figure>
+<h2 id="выполнение-лабораторной-работы-5">Выполнение лабораторной
+работы</h2>
+<figure id="fig:006">
+<img src="image/6.png" style="width:70.0%"
+alt="Запуск модели простого протокола передачи данных" />
+<figcaption aria-hidden="true">Запуск модели простого протокола передачи
+данных</figcaption>
+</figure>
+<h2 id="упражнение">Упражнение</h2>
+<pre><code> Statistics
+------------------------------------------------------------------------
+
+  State Space
+     Nodes:  13341
+     Arcs:   206461
+     Secs:   300
+     Status: Partial
+
+  Scc Graph
+     Nodes:  6975
+     Arcs:   170859
+     Secs:   14</code></pre>
+<h2 id="упражнение-1">Упражнение</h2>
+<pre><code> Boundedness Properties
+------------------------------------------------------------------------
+
+  Best Integer Bounds
+                             Upper      Lower
+     Main&#39;A 1                20         0
+     Main&#39;B 1                10         0
+     Main&#39;C 1                6          0
+     Main&#39;D 1                5          0
+     Main&#39;NextRec 1          1          1
+     Main&#39;NextSend 1         1          1
+     Main&#39;Reciever 1         1          1
+     Main&#39;SA 1               1          1
+     Main&#39;SP 1               1          1
+     Main&#39;Send 1             8          8</code></pre>
+<h2 id="упражнение-2">Упражнение</h2>
+<figure id="fig:007">
+<img src="image/7.png" style="width:70.0%"
+alt="Пространство состояний для модели простого протокола передачи данных" />
+<figcaption aria-hidden="true">Пространство состояний для модели
+простого протокола передачи данных</figcaption>
+</figure>
+<h2 id="выводы">Выводы</h2>
+<p>В процессе выполнения данной лабораторной работы я реализовала
+простой протокол передачи данных в CPN Tools и проведен анализ его
+пространства состояний.</p>
